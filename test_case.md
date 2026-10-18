@@ -1,24 +1,24 @@
 # Test Cases – Simulated Device Monitoring and Alert System
 
-Tested by: Abegail T. Bueno Date: October 12 2026
+## Test Case Table
 
-| Test Case | Input or Action   | Expected Result                         | Actual Result  | Pass/Fail |
-| --------- | ----------------- | --------------------------------------- | -------------- | --------- |
-| TC01      | Run the program   | rates = 72, 88, 65, 94, 81, 76, 102, 69 | Display        | Pass      |
-| TC02      | Enter Measurement | Measurement: 8                          | Measurement: 8 | Pass      |
-| TC03      | Calculate Total   | Total: 647                              | Total: 647     | Pass      |
-| TC04      | Calculate Average | Average: 80.875                         | Average: 80.87 | Pass      |
-| TC05      | find Minimum      | Minimum: 65                             | Minimum: 65    | Pass      |
-| TC06      | Find Maximum      | Maximum: 102                            | Maximum: 102   | Pass      |
-| TC07      | Count readings    |                                         |                |           |
-|           | below 75 Mbps     | Total: 647                              |                | Pass      |
-| TC08      | First reading     |                                         |                |           |
-|           | above 90 Mbps     | Total: 647                              |                | Pass      |
-| TC09      | Check readings    |                                         |                |           |
-|           | below 75 Mbps     | Total: 647                              |                | Pass      |
-| TC010     | Check loop        |                                         |                |           |
-|           | above 90 Mbps     | Total: 647                              |                | Pass      |
+| Test Case | Input or Action | Expected Result | Actual Result | Pass/Fail |
+|---|---|---|---|---|
+| TC01 | Run the program | Displays the initial readings: 28, 31, 35, 37, 29 | Displayed all five initial readings correctly. | Pass |
+| TC02 | View readings | Shows all five temperature readings in order | Displayed all five readings correctly. | Pass |
+| TC03 | Add a new reading | Enter 33; reading is added successfully | Displayed "Reading added successfully." | Pass |
+| TC04 | Enter an invalid reading | Enter abc; displays an error message | Displayed "Invalid input. Enter a whole number only." | Pass |
+| TC05 | Enter a reading above the limit | Enter 120; reading is rejected | Displayed "Invalid reading. Enter a value from 0 to 100." | Pass |
+| TC06 | Classify the readings | Displays NORMAL, WARNING, or CRITICAL for each reading | Classified 28 °C and 29 °C as NORMAL, 31 °C and 35 °C as WARNING, and 37 °C as CRITICAL. | Pass |
+| TC07 | Calculate the total | Total: 160 | Total: 160 | Pass |
+| TC08 | Calculate the average | Average: 32.00 °C | Average: 32.00 °C | Pass |
+| TC09 | Find the minimum and maximum | Minimum: 28 °C; Maximum: 37 °C | Minimum: 28 °C; Maximum: 37 °C | Pass |
+| TC10 | Count readings by category | NORMAL: 2; WARNING: 2; CRITICAL: 1 | Displayed the correct number and percentage for each category. | Pass |
 
 ## Bugs Found and Fixed
 
-- (In this program, there is no bug detected during testing. The program correctly calculated the total, average, minimum, and maximum values. The hardest test was checking the first reading above 90 Mbps. The program correctly displayed 94 Mbps instead of 102 Mbps because the break statement stopped the loop after finding the first qualifying reading.)
+- No major bugs were found during testing. The program correctly displayed the initial readings and calculated the total, average, minimum, and maximum values.
+- The program successfully rejected invalid inputs, such as letters and readings outside the allowed range.
+- The reading classifications worked correctly, with 30 °C and 35 °C classified as WARNING and readings above 35 °C classified as CRITICAL.
+- The summary correctly displayed the number and percentage of readings in each category, along with the overall status.
+- The menu and exit option worked properly, allowing the user to choose different functions and end the program successfully.
