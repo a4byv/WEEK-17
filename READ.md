@@ -6,16 +6,18 @@
 
 ## Project Description
 
-This program analyzes simulated data transfer rate readings. It calculates the total number of measurements, sum, average, minimum, and maximum values. It also counts readings below 75 Mbps and identifies the first reading above 90 Mbps.
+This program is designed to check and analyze temperature readings from a simulated device. It calculates the total, average, lowest, and highest temperatures. It also checks whether each reading is NORMAL, WARNING, or CRITICAL based on the set temperature limits. This helps users understand the device's condition and identify readings that may need attention.
 
 ## Features
 
-Analyze stored data transfer rate readings
-Calculate the total number of measurements
-Compute the sum and average of readings
-Identify the minimum and maximum readings
-Count readings below 75 Mbps
-Find the first reading above 90 Mbps
+- Displays the initial temperature readings.
+- Allows users to add a new temperature reading.
+- Checks if the entered reading is within the allowed range of 0–100 °C.
+- Classifies temperatures as NORMAL, WARNING, or CRITICAL.
+- Calculates the total and average of the readings.
+- Finds the lowest and highest temperatures.
+- Counts the readings under each category and calculates their percentages.
+- Shows the overall status of the device based on the readings.
 
 ## Requirements
 
@@ -31,26 +33,28 @@ Find the first reading above 90 Mbps
 
 ## Data Transfer Rate Analyzer
 
-Measurement: 8
-Total: 647
-Average: 80.875
-Minimum: 65
-Maximum: 102
-The numbers of reading below 75 mbps: 3
-First reading of above 90 mbps: 94
+SIMULATED DEVICE MONITORING SYSTEM
+----------------------------------
+[1] View Readings
+[2] Add Reading
+[3] Classify Readings
+[4] Generate Summary
+[5] Exit
+Enter choice: 
 
 ## Test Cases
 
-I performed 10 tests. ** passed and ** failed.
+I prepared 10 test cases to check if the program works properly. These tests cover the initial readings, adding new readings, handling invalid inputs, classifying temperatures, and calculating the results.
 Full details are in test_cases.md.
 
 ## Known Limitations
 
-The program uses predefined data transfer rate readings.
-New readings cannot be entered by the user.
-The program does not save results to a file.
-The program only identifies the first reading above 90 Mbps.
+- The program starts with a set of temperature readings.
+- Users can only add readings between 0 and 100 °C.
+- The program does not save the readings or results for future use.
+- The temperature categories depend on the limits set in the code.
+- The program uses sample data and is not connected to a real device or temperature sensor.
 
 ## Reflection
 
-The hardest part of this project was calculating and analyzing the data transfer rate readings correctly. I learned how to use Python functions such as len(), sum(), min(), and max() to summarize data. I also used loops and conditional statements to count readings below 75 Mbps and find the first reading above 90 Mbps. Next, I would improve the program by allowing users to enter new readings and validating their inputs.
+While working on this project, I learned how to use Python to check and analyze temperature readings. One of the challenging parts was making sure that the calculations and classifications were correct. I also learned how to use functions like sum(), len(), min(), and max() to get the results more easily. Using loops and conditional statements helped me count the readings and determine the device's overall status. If I were to improve this program in the future, I would add a feature that allows users to save their results and enter more readings easily.
